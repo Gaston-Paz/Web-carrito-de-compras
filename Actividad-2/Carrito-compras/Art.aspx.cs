@@ -9,24 +9,22 @@ using Negocio;
 
 namespace Carrito_compras
 {
-    public partial class _Default : Page
+    public partial class Art : System.Web.UI.Page
     {
-        public List<Articulo> lista;
+        public List<Articulo> listado;
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio neg = new ArticuloNegocio();
             try
             {
-                ArticuloNegocio negocio = new ArticuloNegocio();
-                lista = negocio.listar();
-
-                Session.Add("Articulos", lista);
+                listado = neg.listar();
             }
             catch (Exception ex)
             {
 
-                Response.Redirect("/Error.aspx");
+                Response.Redirect("Error.aspx");
             }
-            
         }
     }
 }
+
