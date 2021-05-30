@@ -126,4 +126,6 @@ insert into ARTICULOS values
 insert into MARCAS values ('TCL'), ('Philips'), ('Admiral'), ('LG'),('Sony')
 insert into ARTICULOS values 
 ('T01', 'Smart TV 4K UHD 43', 'Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN43TU7000 ofrece una experiencia multimedia única.', 1, 2, 'https://images.fravega.com/s250/93639c01d8e01a705eeb8946d7b3610d.jpg', 59.999),
-('T02', 'Smart TV 4K UHD 50', 'Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN50TU7000 ofrece una experiencia multimedia única.', 1, 2, 'https://images.fravega.com/s250/c5b71e73eb05f01c66ff3ecd20e85332.jpg', 69.999)
+('T02', 'Smart TV 4K UHD 50', 'Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN50TU7000 ofrece una experiencia multimedia única.', 1, 2, 'https://images.fravega.com/s250/c5b71e73eb05f01c66ff3ecd20e85332.jpg', 69.999),
+('T03', 'Smart TV 50 4K Ultra HD', 'Mediante sus entradas HDMI podés vincular reproductores de audio y video; consolas de juegos y notebooks.', 5, 2, 'https://images.fravega.com/s250/8e340f89af7d07027ac0bc08fd324ecf.jpg', 58.999),
+('T03', 'Smart TV 42 Full HD', 'El Smart TV TCL L42S6500 de 41,5 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1080 x 1920 píxeles.', 5, 2, 'https://images.fravega.com/s250/e56d17ca976044828eefe7eea2d11cdf.jpg', 39.999),
