@@ -27,7 +27,7 @@
                     <h5 class="card-title"> <%  = item.Nombre  %> </h5>
                     <h6 class="card-title"> $<% = item.Precio %></h6>
                     <p class="card-text"> <% = item.Descripcion %> </p>
-                    <a href="#" class="btn btn-primary align-content-center">Agregar</a>
+                    <a href="ArtDetalle.aspx?codigo<%=item.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
                 </div>
             </div>
             <% } 
