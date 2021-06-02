@@ -5,11 +5,11 @@
     
 
 
-    <div class="row">
+    <<div class="row">
         <div class="col">
             <h1>marcas</h1>
             <ul>
-                <% foreach (Dominio.Marca item in lista)
+                <% foreach (Dominio.Marca item in (List<Dominio.Marca>)Session["Marcas"])
                     {%>
                         <li> <% = item.Nombre %> </li>
                     <%} %>
@@ -18,7 +18,7 @@
         <div class="col card-columns">
 
             <%--Foreach--%>
-  <%         foreach (Dominio.Articulo item in listado)
+  <%         foreach (Dominio.Articulo item in (List<Dominio.Articulo>)Session["Articulos"])                
                 if(item.TipoCategoria.Id == id) { 
                 { %>
             <div class="card text-center mr-3 mt-3" style="width: 18rem;">
