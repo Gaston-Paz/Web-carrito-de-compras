@@ -161,32 +161,32 @@ insert into ARTICULOS values
 ('CO06', 'Magic Keyboard for 12.9-inch iPad Pro', 'Magic Keyboard for 12.9-inch iPad Pro (4th generation) - Mexican Spanish', 3, 4, 'https://images.fravega.com/s500/c565d24b8c2c777a5919ef17ae70490b.jpg', 88999)
 
 --5 Video
---Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 TCL - 15 Philips - 16 Admiral - 17 LG - 18 Nexxt - 19 Srihome
+--Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 Nexxt - 15 Srihome
 insert into MARCAS values ('Nexxt'), ('Srihome')
 insert into ARTICULOS values 
-('V01', 'Cámara Inteligente Wi-Fi', 'La cámara inteligente motorizada Wi-Fi es la solución de seguridad ideal pensada para el hogar.', 18, 5, 'https://images.fravega.com/s500/1c56ec746c16811c80c0e7428f21e0d0.jpg', 3899),
-('V02', 'Webcam Full Hd1080p', 'La cámara web proporciona 1080p HD para capturar imágenes nítidas y graba vídeo 1080P(1920x1080), 720P(1280x720), VGA (640x360).', 19, 5, 'https://images.fravega.com/s500/aaba769472f34c8a4dd734572135f7cf.jpg', 4399),
-('V03', 'Cámara IP HD 3mp 1296p', 'APP Srihome Gama completa de alta definición de 3 MP: 2304 x 1296 píxeles y lente óptica de nuevo diseño que te ofrece una visión más clara.', 19, 5, 'https://images.fravega.com/s500/9e12eea8d5e203143ed0bf3ea80c5740.jpg', 4999)
+('V01', 'Cámara Inteligente Wi-Fi', 'La cámara inteligente motorizada Wi-Fi es la solución de seguridad ideal pensada para el hogar.', 14, 5, 'https://images.fravega.com/s500/1c56ec746c16811c80c0e7428f21e0d0.jpg', 3899),
+('V02', 'Webcam Full Hd1080p', 'La cámara web proporciona 1080p HD para capturar imágenes nítidas y graba vídeo 1080P(1920x1080), 720P(1280x720), VGA (640x360).', 15, 5, 'https://images.fravega.com/s500/aaba769472f34c8a4dd734572135f7cf.jpg', 4399),
+('V03', 'Cámara IP HD 3mp 1296p', 'APP Srihome Gama completa de alta definición de 3 MP: 2304 x 1296 píxeles y lente óptica de nuevo diseño que te ofrece una visión más clara.', 15, 5, 'https://images.fravega.com/s500/9e12eea8d5e203143ed0bf3ea80c5740.jpg', 4999)
 
 --6 CAmaras
---Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 TCL - 15 Philips - 16 Admiral - 17 LG - 18 Nexxt - 19 Srihome
+--Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 Nexxt - 15 Srihome
 insert into ARTICULOS values 
 ('CA01', 'Cámara APS-C Sony a6600 con Montura', 'a6600 camara APS-C con montura tipo E de alta calidad', 9, 6, 'https://images.fravega.com/s500/6cbbd9aee4dd1e03a4ca75689b5ce90d.jpg', 149999),
 ('CA02', 'Camara para Vlog 4K HDR', 'A pesar de su diseño compacto, la ZV-1 está equipada con un sensor de gran tamaño CMOS Exmor RSTm de tipo 1.0.', 9, 6, 'https://images.fravega.com/s500/2c631a5ee79372743b4a0fd3c5dec63e.jpg', 86999),
 ('CA03', 'Cámara Digital con Montura', 'Ligera, compacta y robusta, la a6400 dispone de capacidades y funciones impresionantes.', 9, 6, 'https://images.fravega.com/s500/797a9c45231e906b7f7b9b0a360ca432.jpg', 123999)
 
 --7 VIdeojuegos
---Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 TCL - 15 Philips - 16 Admiral - 17 LG - 18 Nexxt - 19 Srihome - 20 Microsoft - 21 Levelup
+--Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 Nexxt - 15 Srihome - 16 Microsoft - 17 Levelup
 insert into MARCAS values ('Microsoft'), ('Levelup')
 insert into ARTICULOS values 
 ('VI01', 'Joystick Sony Dualshock 4', 'El Dualshock 4 wireless presenta mejoras en cuanto a su capacidad de respuesta y la comodidad de sus componentes.', 9, 7, 'https://images.fravega.com/s500/51fd942ef50a1109720aabbbb8a10cdd.jpg', 9999),
 ('VI02', 'Joystick Sony Dualshock 5', 'Con el nuevo control inalámbrico Sony DualSense para PlayStation 5 vas a poder tener una experiencia de juego más intensa e inmersiva.', 9, 7, 'https://images.fravega.com/s500/a23c2e9cbe114eca833fc5f7288457fc.jpg', 10999),
-('VI03', 'Joystick Microsoft Xbox Series', 'El nuevo control para Xbox te permite conectar cualquier auricular compatible con la entrada de audio de 3.5 mm.', 20, 7, 'https://images.fravega.com/s500/5a4ba01d89206aea02e7385919f709bd.jpg', 13.999),
+('VI03', 'Joystick Microsoft Xbox Series', 'El nuevo control para Xbox te permite conectar cualquier auricular compatible con la entrada de audio de 3.5 mm.', 16, 7, 'https://images.fravega.com/s500/5a4ba01d89206aea02e7385919f709bd.jpg', 13.999),
 ('VI04', 'Consola Sony PS4 1TB', 'La PlayStation 4 presenta un elegante diseño y cuenta con detalles como los botones táctiles de encendido o eject que no se ven a simple vista.', 9, 7, 'https://images.fravega.com/s500/86d4d229047eec4bfb1036b67209615b.jpg', 68999),
-('VI05', 'Consola Level Up Retro', 'La consola Retro Nes de 8-bits trae 500 títulos incorporados, sumado a esto incluye 2 controles.', 21, 7, 'https://images.fravega.com/s500/07822d606253bed06e0e936d63991271.jpg', 3999),
-('VI06', 'Consola Portátil con 168 Juegos', 'La consola portátil Retroboy de Level Up cuenta con 168 juegos incorporados.', 21, 7, 'https://images.fravega.com/s500/cd371127591d2b99e003327019efcf6b.jpg', 3499),
+('VI05', 'Consola Level Up Retro', 'La consola Retro Nes de 8-bits trae 500 títulos incorporados, sumado a esto incluye 2 controles.', 17, 7, 'https://images.fravega.com/s500/07822d606253bed06e0e936d63991271.jpg', 3999),
+('VI06', 'Consola Portátil con 168 Juegos', 'La consola portátil Retroboy de Level Up cuenta con 168 juegos incorporados.', 17, 7, 'https://images.fravega.com/s500/cd371127591d2b99e003327019efcf6b.jpg', 3499),
 ('VI07', 'Juego PS4 Sony God of War', 'God of War es un videojuego de acción y aventura en tercera persona.', 9, 7, 'https://images.fravega.com/s500/b9a34a7f9db8607229fc133753df5190.jpg', 2799),
 ('VI08', 'Juego PS4 Konami PES 2020', 'El Pro Evolution Soccer PES 2020 cuenta con varias mejoras respecto de la edición anterior.', 9, 7, 'https://images.fravega.com/s500/ab09fdb4b7825d6bbcc1d171a073a895.jpg', 1999),
 ('VI09', 'Juego PS4 Ghost of Tsushima', 'Ghost of Tsushima es un juego de acción y aventuras que ocurre a finales del siglo XIII.', 9, 7, 'https://images.fravega.com/s500/8b8022066fc0dba870ef09cb20ed15b5.jpg', 5499),
-('VI10', 'Juego Xbox One Microsoft Halo Wars 2', 'Juego Xbox One Microsoft Halo Wars 2, Estrategia, RTS.', 20, 7, 'https://images.fravega.com/s500/f0b1a751f810162619cf9c9d1a198eea.jpg', 599)
+('VI10', 'Juego Xbox One Microsoft Halo Wars 2', 'Juego Xbox One Microsoft Halo Wars 2, Estrategia, RTS.', 16, 7, 'https://images.fravega.com/s500/f0b1a751f810162619cf9c9d1a198eea.jpg', 599)
 
