@@ -2,14 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-    
-
     <%foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
         {
             if (string.Compare(iten.Codigo, codigo)==0)
             { %>
-    <div class="barra-espacio-20"></div>
-    <div class="row">
+    <div class="row mt-5">
         <div class="col-md-6">
             <div class="row justify-content-center">
                 <img
