@@ -14,12 +14,12 @@ namespace Carrito_compras
         public List<Articulo> listado;
         public List<Marca> lista;
         public int id;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-            id = int.Parse(Request.QueryString["id"]);
-                
+            id = int.Parse(Request.QueryString["id"]);    
             }
             catch (Exception ex)
             {
