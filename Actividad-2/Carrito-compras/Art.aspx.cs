@@ -16,9 +16,9 @@ namespace Carrito_compras
         public int id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = int.Parse(Request.QueryString["id"]);
             try
             {
+            id = int.Parse(Request.QueryString["id"]);
                 
             }
             catch (Exception ex)
