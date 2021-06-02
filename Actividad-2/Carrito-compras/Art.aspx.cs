@@ -16,16 +16,10 @@ namespace Carrito_compras
         public int id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio neg = new ArticuloNegocio();
-            MarcaNegocio negocioMarca = new MarcaNegocio();
-            id = int.Parse(Request.QueryString["id"]);
             try
             {
-                listado = neg.listar();
-                lista = negocioMarca.listar();
-                //dgvArticulos.DataSource = neg.listar();
-                //dgvArticulos.DataBind();
-
+            id = int.Parse(Request.QueryString["id"]);
+                
             }
             catch (Exception ex)
             {
