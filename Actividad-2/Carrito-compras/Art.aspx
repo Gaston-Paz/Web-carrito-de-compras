@@ -44,7 +44,7 @@
                             <img class="img-fluid" src=" <% = iten.UrlImagen %>" alt="alternate text" />
                             <h5 class="card-title"><%  = iten.Nombre  %> </h5>
                             <h6 class="card-title">$<% = iten.Precio %></h6>
-                            <a href="#" class="btn btn-primary align-content-center">Detalle</a>
+                            <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
                             <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
                         </div>
                     </div>

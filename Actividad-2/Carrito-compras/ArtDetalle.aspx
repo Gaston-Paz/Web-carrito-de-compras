@@ -1,27 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ArtDetalle.aspx.cs" Inherits="Carrito_compras.ArtDetalle" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     
 
+    <%foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
+        {
+            if (string.Compare(iten.Codigo, codigo)==0)
+            { %>
+    <div class="barra-espacio-20"></div>
     <div class="row">
         <div class="col-md-6">
             <div class="row justify-content-center">
                 <img
                     class="img-fluid"
-                    src="https://images.fravega.com/s250/51fd942ef50a1109720aabbbb8a10cdd.jpg"
+                    src="<%=iten.UrlImagen%>"
                     alt="" />
             </div>
         </div>
         <div class="col-md-6">
-            <h1>Joystick Sony Dualshock 4</h1>
+            <h1><%=iten.Nombre%></h1>
             <p class="py-3">
-                Some quick example text to build on the card title and make up the
-						bulk of the card's content.
+                <%=iten.Descripcion%>
             </p>
-            <h4>$10.999</h4>
+            <h4>$<%=iten.Precio%></h4>
             <button class="btn btn-primary">Agregar</button>
         </div>
     </div>
+         <% }
+       } %>
     <!--Otras sugerencias-->
     <div class="barra-espacio"></div>
     <div class="row py-2">

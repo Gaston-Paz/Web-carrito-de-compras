@@ -9,7 +9,7 @@ namespace Carrito_compras
 {
     public partial class ArtDetalle : System.Web.UI.Page
     {
-        public string codigo;
+        public string codigo = "";
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -21,7 +21,7 @@ namespace Carrito_compras
             catch (Exception ex)
             {
 
-                Response.Redirect("Error.aspx");
+                Response.Redirect("Default.aspx");
             }
         }
     }
