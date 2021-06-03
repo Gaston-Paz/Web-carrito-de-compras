@@ -12,6 +12,7 @@ namespace Carrito_compras
     public partial class ArtDetalle : System.Web.UI.Page
     {
         public string codigo = "";
+        public int cat;
         protected void Page_Load(object sender, EventArgs e)
         {
             try

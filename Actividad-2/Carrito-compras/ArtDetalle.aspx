@@ -5,8 +5,10 @@
     <%foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
         {
             if (string.Compare(iten.Codigo, codigo)==0)
-            { %>
-    <div class="row mt-5">
+            {
+                cat = iten.TipoCategoria.Id;
+                %>
+    <div class="row mt-5 align-items-center">
         <div class="col-md-6">
             <div class="row justify-content-center">
                 <img
@@ -16,12 +18,12 @@
             </div>
         </div>
         <div class="col-md-6">
-            <h1><%=iten.Nombre%></h1>
+            <h1 class="pb-4"><%=iten.Nombre%></h1>
             <p class="py-3">
                 <%=iten.Descripcion%>
             </p>
-            <h4>$<%=iten.Precio%></h4>
-            <button class="btn btn-primary">Agregar</button>
+            <h4 class="h3">$<%=iten.Precio%></h4>
+            <button class="btn btn-primary btn-lg mt-4">Agregar</button>
         </div>
     </div>
          <% }
@@ -33,49 +35,28 @@
     </div>
     <div class="row justify-content-center">
         <div class="card-deck text-center">
-            <div class="card shadow">
-                <img
-                    class="card-img-top"
-                    src="https://images.fravega.com/s250/51fd942ef50a1109720aabbbb8a10cdd.jpg"
-                    alt="Card image cap" />
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">$199.999</p>
-                </div>
-            </div>
+            <% int cont = 0;
+                foreach (Dominio.Articulo suge in (List<Dominio.Articulo>)Session["Articulos"])
+                {
+                    if (suge.TipoCategoria.Id == cat && cont < 5)
+                    {
+                        cont++;
+                        %>
 
-            <div class="card shadow">
-                <img
-                    class="card-img-top"
-                    src="https://images.fravega.com/s250/51fd942ef50a1109720aabbbb8a10cdd.jpg"
-                    alt="Card image cap" />
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">$199.999</p>
+                <div class="card shadow">
+                    <img
+                        class="card-img-top"
+                        src="<%=suge.UrlImagen%>"
+                        alt="Card image cap" />
+                    <div class="card-body">
+                        <h4 class="card-title h5"><%=suge.Nombre%></h4>
+                        <p class="card-text">$<%=suge.Precio%></p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="card shadow">
-                <img
-                    class="card-img-top"
-                    src="https://images.fravega.com/s250/51fd942ef50a1109720aabbbb8a10cdd.jpg"
-                    alt="Card image cap" />
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">$199.999</p>
-                </div>
-            </div>
-
-            <div class="card shadow">
-                <img
-                    class="card-img-top"
-                    src="https://images.fravega.com/s250/51fd942ef50a1109720aabbbb8a10cdd.jpg"
-                    alt="Card image cap" />
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">$199.999</p>
-                </div>
-            </div>
+           <% }
+        } %>
+           
         </div>
     </div>
 
