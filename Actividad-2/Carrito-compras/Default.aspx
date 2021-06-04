@@ -3,7 +3,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
    <!--slide-->
-    <div class="container-fluid">
+    <div class="container-fluid mt-3">
       <div
         id="carouselExampleIndicators"
         class="carousel slide"

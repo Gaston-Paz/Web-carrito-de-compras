@@ -1,4 +1,12 @@
-﻿body {
+﻿:root {
+    --color-primario: rgba(0, 0, 255, 0.651);
+}
+
+.color-primario{
+    background: var(--color-primario);
+}
+
+body {
     padding-top: 0px;
     padding-bottom: 0px;
 }
@@ -40,10 +48,22 @@ a {
 }
 
 .cat-card:hover {
-    background-color: rgba(0, 0, 255, 0.651);
+    background-color: var(--color-primario);
     color: white;
 }
 
 .mini-card {
     margin-top: 10px;
+}
+
+li {
+    list-style: none;
+}
+
+.footer-icon {
+    font-size: 1.5rem;
+}
+
+.footer-logo {
+    width: 60%;
 }
