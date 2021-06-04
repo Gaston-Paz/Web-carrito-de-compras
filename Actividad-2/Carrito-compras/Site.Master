@@ -85,7 +85,7 @@
                     <input class="form-control mr-sm-2 w-25" type="text" placeholder="Buscar">
                 </form>
             </div>
-                    <i class="fas fa-shopping-cart"></i>
+                    <a href="Carrito.aspx"><i class="fas fa-shopping-cart" style="color: black;"></i></a>
            </div>
         </nav>
                      

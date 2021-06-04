@@ -9,7 +9,7 @@
             <h1 class="mb-4 mt-4">Marcas</h1>
             <ul>
                 <% foreach (Dominio.Marca item in (List<Dominio.Marca>)Session["Marcas"])
-                   {
+                    {
                         int contador = 0;
                         foreach (Dominio.Articulo items in (List<Dominio.Articulo>)Session["Articulos"])
                         {
@@ -24,66 +24,75 @@
 
                         } %>
                 <% FiltroMarca.Text = item.Nombre + " (" + contador + ")"; %>
-              <li style ="margin-bottom: 5px; margin-left:-15px"><a href="Art.aspx?id=<%=id%>&marca=<%=item.Id%>"><asp:Button ID="FiltroMarca" runat="server" BackColor="White" BorderColor="Transparent"/></a> </li>  
-                
-                
-                    
-                
+                <li style="margin-bottom: 5px; margin-left: -15px"><a href="Art.aspx?id=<%=id%>&marca=<%=item.Id%>">
+                    <asp:Button ID="FiltroMarca" runat="server" BackColor="White" BorderColor="Transparent" /></a> </li>
+
+
+
+
                 <% } %>
             </ul>
         </div>
 
-        <%     if(marca == 0){          %>
+        <%-- Encolumnamos los articulos de la categoria --%>
 
-        
+        <%     if (marca == 0)
+            {          %>
+
+
 
         <div class="col card-columns">
-            <%-- Encolumnamos los articulos de la categoria --%>
+
             <%--Se cargan los productos sin filtro de marca--%>
 
             <% foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
-                    {
+                {
                     if (iten.TipoCategoria.Id == id)
                     { %>
-                    <div class="card text-center mr-3 mt-3" style="width: 18rem;">
-                        <div class="card-body">
-                            <img class="img-fluid" src=" <% = iten.UrlImagen %>" alt="alternate text" />
-                            <h5 class="card-title"><%  = iten.Nombre  %> </h5>
-                            <h6 class="card-title">$<% = iten.Precio %></h6>
-                            <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
-                            <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-            <% }} %>
-               
+            <div class="card text-center mr-3 mt-3" style="width: 18rem;">
+                <div class="card-body">
+                    <img class="img-fluid" src=" <% = iten.UrlImagen %>" alt="alternate text" />
+                    <h5 class="card-title"><%  = iten.Nombre  %> </h5>
+                    <h6 class="card-title">$<% = iten.Precio %></h6>
+                    <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
+                    <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <% }
+            } %>
         </div>
 
-    
 
-    <%} else{%>
-                
-               <div class="col card-columns">
-            
+
+        <%}
+        else
+        {%>
+
+        <div class="col card-columns">
+
             <%-- Encolumnamos los articulos de la categoria --%>
-            <%--Se cargan los productos filtrados por marca--%> 
+            <%--Se cargan los productos filtrados por marca--%>
 
             <% foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
-                    {
+                {
                     if (iten.TipoCategoria.Id == id)
-                    {       if(iten.TipoMarca.Id == marca){        %>
-                    
-                    <div class="card text-center mr-3 mt-3" style="width: 18rem;">
-                        
-                        <div class="card-body">
-                            <img class="img-fluid" src=" <% = iten.UrlImagen %>" alt="alternate text" />
-                            <h5 class="card-title"><%  = iten.Nombre  %> </h5>
-                            <h6 class="card-title">$<% = iten.Precio %></h6>
-                            <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
-                            <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </div>
-            <% }} }%>
-               
+                    {
+                        if (iten.TipoMarca.Id == marca)
+                        {        %>
+
+            <div class="card text-center mr-3 mt-3" style="width: 18rem;">
+
+                <div class="card-body">
+                    <img class="img-fluid" src=" <% = iten.UrlImagen %>" alt="alternate text" />
+                    <h5 class="card-title"><%  = iten.Nombre  %> </h5>
+                    <h6 class="card-title">$<% = iten.Precio %></h6>
+                    <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
+                    <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+            <% }
+                }
+            }%>
         </div>
 
     </div>
