@@ -133,8 +133,6 @@ C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\roslyn\VBCSCompiler.exe
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Antlr3.Runtime.dll
-C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\AspNet.ScriptManager.jQuery.dll
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Dominio.dll
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\Max\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
