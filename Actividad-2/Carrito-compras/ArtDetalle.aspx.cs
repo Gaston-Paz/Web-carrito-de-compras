@@ -23,7 +23,7 @@ namespace Carrito_compras
             }
             catch (Exception ex)
             {
-
+                
                 Response.Redirect("Default.aspx");
             }
         }

@@ -14,19 +14,24 @@ namespace Carrito_compras
         public List<Articulo> listado;
         public List<Marca> lista;
         public int id;
+        public int marca;
         
         protected void Page_Load(object sender, EventArgs e)
         {
             try
             {
-            id = int.Parse(Request.QueryString["id"]);    
+                id = int.Parse(Request.QueryString["id"]);
+                marca = int.Parse(Request.QueryString["marca"]);
+                    
             }
             catch (Exception ex)
             {
 
-                Response.Redirect("Error.aspx");
+                Response.Redirect("Default.aspx");
             }
         }
+
+ 
     }
 }
 

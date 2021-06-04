@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="ArtDetalle.aspx.cs" Inherits="Carrito_compras.ArtDetalle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+       
+        
 
     <%foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
         {
@@ -59,5 +61,6 @@
            
         </div>
     </div>
+
 
 </asp:Content>

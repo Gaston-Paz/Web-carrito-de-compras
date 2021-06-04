@@ -127,7 +127,7 @@ insert into MARCAS values ('TCL'), ('Philips'), ('Admiral'), ('LG'),('Sony')
 insert into ARTICULOS values 
 ('T01', 'Smart TV 4K UHD 43', 'Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN43TU7000 ofrece una experiencia multimedia única.', 1, 2, 'https://images.fravega.com/s500/93639c01d8e01a705eeb8946d7b3610d.jpg', 59999),
 ('T02', 'Smart TV 4K UHD 50', 'Con la tecnología Crystal UHD 4K, HDR y un diseño sofisticado y súper delgado, el Smart TV Samsung UN50TU7000 ofrece una experiencia multimedia única.', 1, 2, 'https://images.fravega.com/s500/c5b71e73eb05f01c66ff3ecd20e85332.jpg', 69999),
-('T03', 'Smart TV 50 4K Ultra HD', 'Mediante sus entradas HDMI podés vincular reproductores de audio y video; consolas de juegos y notebooks.', 5, 2, 'https://images.fravega.com/s500/8e340f89af7d07027ac0bc08fd324ecf.jpg', 58.999),
+('T03', 'Smart TV 50 4K Ultra HD', 'Mediante sus entradas HDMI podés vincular reproductores de audio y video; consolas de juegos y notebooks.', 5, 2, 'https://images.fravega.com/s500/8e340f89af7d07027ac0bc08fd324ecf.jpg', 58999),
 ('T04', 'Smart TV 42 Full HD', 'El Smart TV TCL L42S6500 de 41,5 pulgadas cuenta con una pantalla formato widescreen (16:9) con una resolución de 1080 x 1920 píxeles.', 5, 2, 'https://images.fravega.com/s500/e56d17ca976044828eefe7eea2d11cdf.jpg', 39999),
 ('T05', 'Smart TV 43 Full HD', 'El Smart TV 43 pulgadas Philips 43PFD6825/77 cuenta con una pantalla de visualización LED de formato widescreen (16:9).', 6, 2, 'https://images.fravega.com/s500/7be2a70abbadd9bb02f4695c42d8949f.jpg', 39999),
 ('T06', 'Smart TV 32 HD', 'Mediante sus 2 puertos USB podrás reproducir música, fotos y videos almacenados en tus dispositivos externos como tablets, smartphones y pendrives.', 6, 2, 'https://images.fravega.com/s500/6a5aac96c11a06be4ebc9d74773ceb6c.jpg', 29999),
@@ -166,15 +166,21 @@ insert into MARCAS values ('Nexxt'), ('Srihome')
 insert into ARTICULOS values 
 ('V01', 'Cámara Inteligente Wi-Fi', 'La cámara inteligente motorizada Wi-Fi es la solución de seguridad ideal pensada para el hogar.', 14, 5, 'https://images.fravega.com/s500/1c56ec746c16811c80c0e7428f21e0d0.jpg', 3899),
 ('V02', 'Webcam Full Hd1080p', 'La cámara web proporciona 1080p HD para capturar imágenes nítidas y graba vídeo 1080P(1920x1080), 720P(1280x720), VGA (640x360).', 15, 5, 'https://images.fravega.com/s500/aaba769472f34c8a4dd734572135f7cf.jpg', 4399),
-('V03', 'Cámara IP HD 3mp 1296p', 'APP Srihome Gama completa de alta definición de 3 MP: 2304 x 1296 píxeles y lente óptica de nuevo diseño que te ofrece una visión más clara.', 15, 5, 'https://images.fravega.com/s500/9e12eea8d5e203143ed0bf3ea80c5740.jpg', 4999)
-
+('V03', 'Cámara IP HD 3mp 1296p', 'APP Srihome Gama completa de alta definición de 3 MP: 2304 x 1296 píxeles y lente óptica de nuevo diseño que te ofrece una visión más clara.', 15, 5, 'https://images.fravega.com/s500/9e12eea8d5e203143ed0bf3ea80c5740.jpg', 4999),
+('V04', 'Camara Ip Exterior 3MP Visión Nocturna Full Color','Cámara de vigilancia wifi con luces LED infrarrojas de alta potencia, y dos lámparas luz de cálida, te proporciona una visión nocturna a todo color.',15,5,'https://images.fravega.com/s500/640d5f9326c5d4e92223ae7cc948ba81.jpg',6999),
+('V05', 'Cámara IP Domo HD 1080 Zoom 5X Audio 2 vías','5X lente óptica: 5x rango de zoom (2,8 mm-12 mm) de telefonía móvil a distancia zoom de la pantalla controlable y outcommunication.',15,5,'https://images.fravega.com/s500/59bb21a433b4ed68d6512f5c7ac8796f.png',14999),
+('V06','Cámara Ip Exterior 3MP HD Wifi - Visión Nocturna','Se usa con la APP SRIHOME FHD 3MP & Visión Nocturna La Sricam IP cámara con HD 2304 x 1296P y el filtro interruptor automático IR-CUT.',15,5,'https://images.fravega.com/s500/be4881f45304924e14cf3a04ffa9e445.jpg',6999),
+('V07','Cámara Ip Wifi Exterior Hd 3mp- visión Nocturna','Admite detección de movimiento, alarma de teléfono, alarma de correo electrónico.',15,5,'https://images.fravega.com/s500/6293d671c92bb15d0acdc486eeb1e63c.png',12999)
 --6 CAmaras
 --Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 Nexxt - 15 Srihome
 insert into ARTICULOS values 
 ('CA01', 'Cámara APS-C Sony a6600 con Montura', 'a6600 camara APS-C con montura tipo E de alta calidad', 9, 6, 'https://images.fravega.com/s500/6cbbd9aee4dd1e03a4ca75689b5ce90d.jpg', 149999),
 ('CA02', 'Camara para Vlog 4K HDR', 'A pesar de su diseño compacto, la ZV-1 está equipada con un sensor de gran tamaño CMOS Exmor RSTm de tipo 1.0.', 9, 6, 'https://images.fravega.com/s500/2c631a5ee79372743b4a0fd3c5dec63e.jpg', 86999),
-('CA03', 'Cámara Digital con Montura', 'Ligera, compacta y robusta, la a6400 dispone de capacidades y funciones impresionantes.', 9, 6, 'https://images.fravega.com/s500/797a9c45231e906b7f7b9b0a360ca432.jpg', 123999)
-
+('CA03', 'Cámara Digital con Montura', 'Ligera, compacta y robusta, la a6400 dispone de capacidades y funciones impresionantes.', 9, 6, 'https://images.fravega.com/s500/797a9c45231e906b7f7b9b0a360ca432.jpg', 123999),
+('CA04','Lente Objetivo Sony SELP18105G E Pz 18-105MM F4','Lente de zoom estandar de 6x, Estabilizacion de imagen SteadyShot, Formato APS-C, montura E',9,6,'https://images.fravega.com/s500/f82cdd8026a955ef39f51725181fef1b.png',73999),
+('CA05','Lente Teleobjetivo Sony 85MM SEL85F18 Full Frame','Montura tipo E con formato Full Frame, Teleobjetivo medio prime, Gran portabilidad para el uso diario',9,6,'https://images.fravega.com/s500/c7b252a2d7e9b5191639e542d577f85c.jpg',67999),
+('CA06','Lente Objetivo Sony 55MM SEL55F18Z Zeiss F1.8 Full','Montura E, formato Full Frame, Lente prime estandar ZEISS, Apertura circular de 9 laminas',9,6,'https://images.fravega.com/s500/69688bf7ebba3aa2b91e7daf51469fad.png',111999),
+('CA07','Lente Gran Angular Sony 35MM F1.8 SEL35F18F Full','Montura tipo E con formato Full Frame, Prime gran angular, Rapido, compacto y ligero',9,6,'https://images.fravega.com/s500/b62862d39ce664ae4535f871211360ac.jpg',79999)
 --7 VIdeojuegos
 --Marcas 1 Samsung - 2 Xiaomi - 3 Apple - 4 Motorola - 5 TCL - 6 Philips - 7 Admiral - 8 LG - 9 Sony - 10 JBL - 11 Winco - 12 HP - 13 Lenovo - 14 Nexxt - 15 Srihome - 16 Microsoft - 17 Levelup
 insert into MARCAS values ('Microsoft'), ('Levelup')
@@ -188,5 +194,5 @@ insert into ARTICULOS values
 ('VI07', 'Juego PS4 Sony God of War', 'God of War es un videojuego de acción y aventura en tercera persona.', 9, 7, 'https://images.fravega.com/s500/b9a34a7f9db8607229fc133753df5190.jpg', 2799),
 ('VI08', 'Juego PS4 Konami PES 2020', 'El Pro Evolution Soccer PES 2020 cuenta con varias mejoras respecto de la edición anterior.', 9, 7, 'https://images.fravega.com/s500/ab09fdb4b7825d6bbcc1d171a073a895.jpg', 1999),
 ('VI09', 'Juego PS4 Ghost of Tsushima', 'Ghost of Tsushima es un juego de acción y aventuras que ocurre a finales del siglo XIII.', 9, 7, 'https://images.fravega.com/s500/8b8022066fc0dba870ef09cb20ed15b5.jpg', 5499),
-('VI10', 'Juego Xbox One Microsoft Halo Wars 2', 'Juego Xbox One Microsoft Halo Wars 2, Estrategia, RTS.', 16, 7, 'https://images.fravega.com/s500/f0b1a751f810162619cf9c9d1a198eea.jpg', 599)
+('VI10', 'Juego Xbox One Microsoft Halo Wars 2', 'Juego Xbox One Microsoft Halo Wars 2, Estrategia, RTS.', 16, 7, 'https://images.fravega.com/s500/f0b1a751f810162619cf9c9d1a198eea.jpg', 5999)
 
