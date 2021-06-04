@@ -15,6 +15,7 @@ namespace Carrito_compras
         public List<Marca> listaMarca;
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             try
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
@@ -22,13 +23,14 @@ namespace Carrito_compras
                 MarcaNegocio negocioMarca = new MarcaNegocio();
                 listaMarca = negocioMarca.listar();
 
+
                 Session.Add("Articulos", listaArticulo);
                 Session.Add("Marcas", listaMarca);
             }
             catch (Exception ex)
             {
 
-                Response.Redirect("/Error.aspx");
+                //Response.Redirect("/error.aspx");
             }
             
         }
