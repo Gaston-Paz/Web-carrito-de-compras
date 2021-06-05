@@ -26,6 +26,7 @@
             </p>
             <h4 class="h3">$<%=iten.Precio%></h4>
             <button class="btn btn-primary btn-lg mt-4">Agregar</button>
+            <a href="Carrito.aspx?id=<%=iten.Id %>" class="btn btn-primary btn-lg mt-4">Agregar</a>
         </div>
     </div>
          <% }
