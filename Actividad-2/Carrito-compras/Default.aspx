@@ -110,7 +110,7 @@
                     </div>
                     <div class="col">
                         <h4>12 cuotas sin interes</h4>
-                        <a href="" class="btn btn-primary">Ver más</a>
+                        <a href="Art.aspx?id=1&marca=0" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="col">
                         <h4>12 cuotas sin interes</h4>
-                        <a href="" class="btn btn-primary">Ver más</a>
+                        <a href="Art.aspx?id=2&marca=0" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
