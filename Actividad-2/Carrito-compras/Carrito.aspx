@@ -7,40 +7,43 @@
 
         </div>
 
-        <table class="table">
+      <table class="table">
             <thead>
                 <tr>
-                    <th>#</th>
+                    <th>Código</th>
                     <th>Nombre</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
                     <th>SubTotal</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
 
-                <asp:Repeater runat="server" ID="repetidor">
+                <asp:Repeater runat="server" ID="repetidor" >
                     <ItemTemplate>
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row"><%#Eval("Codigo")%></th>
                             <td><%#Eval("Nombre")%></td>
+                            <td>  </td>
+                            <td>$<%#Eval("Precio")%></td>
                             <td>Otto</td>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                        </tr>
+                           <td><a href="Carrito.aspx?id=<%#Eval("Id")%>&a=d"><btn>Eliminar</btn></a>
+                            </td>
+                       </tr>
                     </ItemTemplate>
                 </asp:Repeater>
-
-            </tbody>
+        
+           </tbody>
         </table>
 
-
+        
 
     </div>
 
     <div class="container d-flex justify-content-center">
 
-        <a href="#!" class="btn btn-primary btn-lg mb-5">Finalizar compra</a>
+        <a href="Carrito.aspx" class="btn btn-primary btn-lg mb-5">Finalizar compra</a>
     </div>
 
 

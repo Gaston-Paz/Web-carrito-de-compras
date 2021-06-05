@@ -15,7 +15,8 @@ namespace Carrito_compras
         public List<Marca> lista;
         public int id;
         public int marca;
-        
+        public List<Articulo> listaCarrito;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -31,11 +32,7 @@ namespace Carrito_compras
             }
         }
 
-        protected void btnAgregar_Click(object sender, EventArgs e)
-        {
-            var argument = ((Button)sender).CommandArgument;
-            List<Articulo> listaCarrito = (List<Articulo>)Session["listaCarrito"];
-        }
+     
     }
 }
 

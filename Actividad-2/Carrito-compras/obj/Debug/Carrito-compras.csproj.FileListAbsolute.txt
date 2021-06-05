@@ -13,8 +13,6 @@ C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-com
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\roslyn\System.ValueTuple.dll
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\roslyn\VBCSCompiler.exe
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Antlr3.Runtime.dll
-C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\AspNet.ScriptManager.bootstrap.dll
-C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\AspNet.ScriptManager.jQuery.dll
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Microsoft.AspNet.FriendlyUrls.dll
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Microsoft.AspNet.Web.Optimization.WebForms.dll
 C:\Users\Gastón\Documents\GitHub\Web-carrito-de-compras\Actividad-2\Carrito-compras\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
