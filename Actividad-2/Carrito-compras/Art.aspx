@@ -55,7 +55,8 @@
                     <h5 class="card-title"><%  = iten.Nombre  %> </h5>
                     <h6 class="card-title">$<% = iten.Precio %></h6>
                     <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
-                    <a href="#" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
+                    <%--<asp:Button Text="text" CssClass="fas fa-shopping-cart" runat="server" ID="btnAgregar" CommandArgument='<%#Eval("Id")%>' OnClick="btnAgregar_Click" />--%>
+                    <a href="Carrito.aspx?id=<%=iten.Id %>" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
             <% }

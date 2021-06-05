@@ -31,7 +31,11 @@ namespace Carrito_compras
             }
         }
 
- 
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            var argument = ((Button)sender).CommandArgument;
+            List<Articulo> listaCarrito = (List<Articulo>)Session["listaCarrito"];
+        }
     }
 }
 
