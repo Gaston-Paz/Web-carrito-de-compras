@@ -13,6 +13,7 @@ namespace Carrito_compras
     {
         public List<Articulo> listaArticulo;
         public List<Marca> listaMarca;
+        
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -26,6 +27,8 @@ namespace Carrito_compras
 
                 Session.Add("Articulos", listaArticulo);
                 Session.Add("Marcas", listaMarca);
+
+                
             }
             catch (Exception ex)
             {

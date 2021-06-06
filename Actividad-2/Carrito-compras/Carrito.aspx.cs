@@ -45,8 +45,17 @@ namespace Carrito_compras
                             iten.Cantidad = elim.Cantidad - 1;
                             iten.ItemArt = elim.ItemArt;
                             iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
-                            items.Remove(elim);
-                            items.Add(iten);
+
+                            if (iten.Cantidad == 0)
+                            {
+                                items.Remove(elim);
+                            }
+                            else
+                            {
+                                items.Remove(elim);
+                                items.Add(iten);
+                            }
+                            
                         }
                         else { 
 

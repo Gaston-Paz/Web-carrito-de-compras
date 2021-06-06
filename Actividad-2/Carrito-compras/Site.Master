@@ -43,7 +43,7 @@
         </asp:ScriptManager>
 
         <%--Barra de navegación--%>
-                
+             
         <nav class="navbar navbar-expand-lg navbar-dark color-primario">
             <div class="container">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
@@ -84,10 +84,12 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2 w-25" type="text" placeholder="Buscar">
+                    <input class="form-control mr-sm-2 w-25" type="text" placeholder="Buscar" name="buscar">
                 </form>
             </div>
-                <a href="Carrito.aspx"><i class="fas fa-shopping-cart"></i><span class="badge badge-light">0</span> </a>
+                <div class="btn btn-light">
+                    <a href="Carrito.aspx"><i class="fas fa-shopping-cart"></i><span class="badge badge-light ml-1"><%=Session["CantidadCarrito"]%></span></a>
+                </div>
            </div>
         </nav>
                      
