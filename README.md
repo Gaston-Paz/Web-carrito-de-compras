@@ -20,6 +20,26 @@ Este proyecto fue creado por [Gaston Paz](https://github.com/Gaston-Paz) [Maximi
 
 # Imágenes
 
-## Header y Nav
+## Home
 
-![menu](/readme/)
+![menu](/readme/home-1.png)
+
+![menu](/readme/home-2.png)
+
+## Categorías
+
+![menu](/readme/categorias.png)
+
+## Detalle
+
+![menu](/readme/detalle-1.png)
+
+![menu](/readme/detalle-2.png)
+
+## Carrito
+
+![menu](/readme/carrito.png)
+
+## Finalizar Compra
+
+![menu](/readme/finalizar.png)
