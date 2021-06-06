@@ -20,7 +20,7 @@ Este proyecto fue creado por [Gaston Paz](https://github.com/Gaston-Paz) [Maximi
 
 # Video demostración
 
-[menu](https://youtu.be/xW7tz4VYOh8)
+[![Watch the video](/readme/home-1.png)](https://youtu.be/xW7tz4VYOh8)
 
 # Imágenes
 
