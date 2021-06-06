@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Dominio;
+using Negocio;
 
 namespace Carrito_compras
 {
@@ -12,6 +13,7 @@ namespace Carrito_compras
     {
         public List<ItemCarrito> ListaItem;
         public int cantidadCarrito;
+        public List<Articulo> ArtBuscar;
         protected void Page_Load(object sender, EventArgs e)
         {
             try
@@ -30,6 +32,39 @@ namespace Carrito_compras
                     
                 }
                 Session.Add("CantidadCarrito", cantidadCarrito);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+        protected void BtnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                List<Articulo> Aux = (List<Articulo>)Session["Articulos"];
+                ArtBuscar = new List<Articulo>();
+
+                foreach (Articulo item in Aux)
+                {
+                    if (System.Text.RegularExpressions.Regex.IsMatch(item.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                    {
+                        ArtBuscar.Add(item);
+                    }
+                    else
+                    {
+                        if (System.Text.RegularExpressions.Regex.IsMatch(item.TipoMarca.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                        {
+                            ArtBuscar.Add(item);
+                        }
+                    }
+                }
+
+                Session.Add("Buscar", ArtBuscar);
+
+                Response.Redirect("Art.aspx?id=0&marca=-1&buscar=1");
             }
             catch (Exception ex)
             {

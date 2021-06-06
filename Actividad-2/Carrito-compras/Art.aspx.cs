@@ -16,6 +16,8 @@ namespace Carrito_compras
         public int id;
         public int marca;
         public List<Articulo> listaCarrito;
+        public int buscar;
+        public List<Articulo> listaBuscar;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -23,7 +25,8 @@ namespace Carrito_compras
             {
                 id = int.Parse(Request.QueryString["id"]);
                 marca = int.Parse(Request.QueryString["marca"]);
-                    
+                buscar = int.Parse(Request.QueryString["buscar"]);
+                listaBuscar = (List<Articulo>)Session["Buscar"];
             }
             catch (Exception ex)
             {

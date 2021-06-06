@@ -21,6 +21,16 @@
                                 }
 
                             }
+                            else
+                            {
+                                if (id == 0)
+                                {
+                                    if (item.Id == items.TipoMarca.Id)
+                                    {
+                                        contador++;
+                                    }
+                                }
+                            }
 
                         } %>
                 <% FiltroMarca.Text = item.Nombre + " (" + contador + ")"; %>
@@ -59,14 +69,14 @@
                 </div>
             </div>
             <% }
-            } %>
+                } %>
         </div>
 
 
 
         <%}
-        else
-        {%>
+            else
+            {%>
 
         <div class="col card-columns">
 
@@ -91,8 +101,28 @@
                 </div>
             </div>
             <% }
+                    }
                 }
-            }%>
+                //Se cargan los articulos buscados
+                if (buscar == 1)
+                {
+                    foreach (Dominio.Articulo buscar in listaBuscar)
+                    { %>
+
+            <div class="card text-center mr-3 mt-3" style="width: 18rem;">
+
+                <div class="card-body">
+                    <img class="img-fluid" src=" <% = buscar.UrlImagen %>" alt="alternate text" />
+                    <h5 class="card-title"><%  = buscar.Nombre  %> </h5>
+                    <h6 class="card-title">$<% = buscar.Precio %></h6>
+                    <a href="ArtDetalle.aspx?codigo=<%=buscar.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
+                    <a href="Carrito.aspx?id=<%=buscar.Id %>" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </div>
+
+            <% }
+                }
+            %>
         </div>
         <% }%>
     </div>
