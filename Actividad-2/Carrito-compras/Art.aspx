@@ -34,7 +34,7 @@
 
                         } %>
                 <% FiltroMarca.Text = item.Nombre + " (" + contador + ")"; %>
-                <li style="margin-bottom: 5px; margin-left: -15px"><a href="Art.aspx?id=<%=id%>&marca=<%=item.Id%>">
+                <li style="margin-bottom: 5px; margin-left: -15px"><a href="Art.aspx?id=<%=id%>&marca=<%=item.Id%>&buscar=0">
                     <asp:Button ID="FiltroMarca" runat="server" BackColor="White" BorderColor="Transparent" /></a> </li>
 
 

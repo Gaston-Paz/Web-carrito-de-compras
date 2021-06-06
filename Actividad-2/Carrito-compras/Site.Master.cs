@@ -36,41 +36,33 @@ namespace Carrito_compras
             catch (Exception ex)
             {
 
-                throw;
+                Response.Redirect("Error.aspx");
             }
         }
 
         protected void BtnBuscar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                List<Articulo> Aux = (List<Articulo>)Session["Articulos"];
-                ArtBuscar = new List<Articulo>();
+            List<Articulo> Aux = (List<Articulo>)Session["Articulos"];
+            ArtBuscar = new List<Articulo>();
 
-                foreach (Articulo item in Aux)
+            foreach (Articulo item in Aux)
+            {
+                if (System.Text.RegularExpressions.Regex.IsMatch(item.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                 {
-                    if (System.Text.RegularExpressions.Regex.IsMatch(item.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                    ArtBuscar.Add(item);
+                }
+                else
+                {
+                    if (System.Text.RegularExpressions.Regex.IsMatch(item.TipoMarca.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
                     {
                         ArtBuscar.Add(item);
                     }
-                    else
-                    {
-                        if (System.Text.RegularExpressions.Regex.IsMatch(item.TipoMarca.Nombre, TxtBuscar.Text, System.Text.RegularExpressions.RegexOptions.IgnoreCase))
-                        {
-                            ArtBuscar.Add(item);
-                        }
-                    }
                 }
-
-                Session.Add("Buscar", ArtBuscar);
-
-                Response.Redirect("Art.aspx?id=0&marca=-1&buscar=1");
             }
-            catch (Exception ex)
-            {
 
-                throw;
-            }
+            Session.Add("Buscar", ArtBuscar);
+
+            Response.Redirect("Art.aspx?id=0&marca=-1&buscar=1");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Carrito_compras
             catch (Exception ex)
             {
 
-                //Response.Redirect("/error.aspx");
+                Response.Redirect("Error.aspx");
             }
             
         }

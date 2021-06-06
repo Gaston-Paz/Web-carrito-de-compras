@@ -10,98 +10,93 @@ namespace Carrito_compras
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        
         public List<ItemCarrito> items;
         ItemCarrito iten;
         public decimal total;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
 
-            items = (List<ItemCarrito>)Session["items"];
-            if (items == null)
-                items = new List<ItemCarrito>();
-
-            iten = new ItemCarrito();
-
-            if (!IsPostBack)
+            try
             {
-                if (Request.QueryString["Id"] != null)
-                {
-                    if(items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]) == null)
-                    {
-                        List<Articulo> listaActual = (List<Articulo>)Session["Articulos"];
-                        iten.ItemArt = listaActual.Find(x => x.Id.ToString() == Request.QueryString["Id"]);
-                        iten.Cantidad = 1;
-                        iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
-                        items.Add(iten);
-                    }
-                    else
-                    {
-                        if (Request.QueryString["a"] == "r")
-                        {
-                            ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
-                            iten.Cantidad = elim.Cantidad - 1;
-                            iten.ItemArt = elim.ItemArt;
-                            iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+                items = (List<ItemCarrito>)Session["items"];
+                if (items == null)
+                    items = new List<ItemCarrito>();
 
-                            if (iten.Cantidad == 0)
+                iten = new ItemCarrito();
+
+                if (!IsPostBack)
+                {
+                    if (Request.QueryString["Id"] != null)
+                    {
+                        if (items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]) == null)
+                        {
+                            List<Articulo> listaActual = (List<Articulo>)Session["Articulos"];
+                            iten.ItemArt = listaActual.Find(x => x.Id.ToString() == Request.QueryString["Id"]);
+                            iten.Cantidad = 1;
+                            iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+                            items.Add(iten);
+                        }
+                        else
+                        {
+                            if (Request.QueryString["a"] == "r")
                             {
-                                items.Remove(elim);
+                                ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                                iten.Cantidad = elim.Cantidad - 1;
+                                iten.ItemArt = elim.ItemArt;
+                                iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+
+                                if (iten.Cantidad == 0)
+                                {
+                                    items.Remove(elim);
+                                }
+                                else
+                                {
+                                    items.Remove(elim);
+                                    items.Add(iten);
+                                }
+
                             }
                             else
                             {
+
+                                ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                                iten.Cantidad = elim.Cantidad + 1;
+                                iten.ItemArt = elim.ItemArt;
+                                iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
                                 items.Remove(elim);
                                 items.Add(iten);
                             }
-                            
                         }
-                        else { 
 
-                        ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
-                        iten.Cantidad = elim.Cantidad + 1;
-                        iten.ItemArt = elim.ItemArt;
-                        iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
-                        items.Remove(elim);
-                        items.Add(iten);
-                        }
                     }
 
-                    
+                    if (Request.QueryString["a"] == "d")
+                    {
+                        ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                        items.Remove(elim);
+                        Session.Add("items", items);
+                    }
 
+                    repetidor.DataSource = items;
+                    repetidor.DataBind();
 
                 }
 
-                
+                Session.Add("items", items);
 
-
-
-                if (Request.QueryString["a"] == "d")
+                foreach (ItemCarrito item in items)
                 {
-                    ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
-                    items.Remove(elim);
-                    Session.Add("items", items);
+                    total += item.Subtotal;
                 }
-
-
-                repetidor.DataSource = items;
-                repetidor.DataBind();
-
-                
             }
-
-            Session.Add("items", items);
-
-            foreach (ItemCarrito item in items)
+            catch (Exception ex)
             {
-                total += item.Subtotal;
+
+                Response.Redirect("Error.aspx");
             }
 
-            
         }
-
-        
 
     }
 }

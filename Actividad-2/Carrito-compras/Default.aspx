@@ -61,37 +61,37 @@
             <h1 class="h1">Categorías</h1>
         </div>
         <div class="row text-center justify-content-center">
-            <a href="Art.aspx?id=4&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=4&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-laptop cat-icon"></i>
                 <h5>Computación</h5>
             </a>
 
-            <a href="Art.aspx?id=1&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=1&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-mobile-alt cat-icon"></i>
                 <h5>Celulares</h5>
             </a>
 
-            <a href="Art.aspx?id=3&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=3&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-headphones cat-icon"></i>
                 <h5>Audio</h5>
             </a>
 
-            <a href="Art.aspx?id=5&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=5&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-video cat-icon"></i>
                 <h5>Video</h5>
             </a>
 
-            <a href="Art.aspx?id=6&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=6&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-camera cat-icon"></i>
                 <h5>Camaras</h5>
             </a>
 
-            <a href="Art.aspx?id=2&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=2&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-tv cat-icon"></i>
                 <h5>Televisores</h5>
             </a>
 
-            <a href="Art.aspx?id=7&marca=0" class="col cat-card">
+            <a href="Art.aspx?id=7&marca=0&buscar=0" class="col cat-card">
                 <i class="fas fa-gamepad cat-icon"></i>
                 <h5>Video Juegos</h5>
             </a>
@@ -110,7 +110,7 @@
                     </div>
                     <div class="col">
                         <h4>12 cuotas sin interes</h4>
-                        <a href="Art.aspx?id=4&marca=0" class="btn btn-primary">Ver más</a>
+                        <a href="Art.aspx?id=4&marca=0&buscar=0" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
                     </div>
                     <div class="col">
                         <h4>12 cuotas sin interes</h4>
-                        <a href="Art.aspx?id=2&marca=0" class="btn btn-primary">Ver más</a>
+                        <a href="Art.aspx?id=2&marca=0&buscar=0" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>

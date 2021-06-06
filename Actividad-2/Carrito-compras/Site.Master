@@ -62,25 +62,25 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mr-auto mt-2 mt-md-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=4&marca=0">Computación</a>
+                        <a class="nav-link" href="Art.aspx?id=4&marca=0&buscar=0">Computación</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=1&marca=0">Celulares</a>
+                        <a class="nav-link" href="Art.aspx?id=1&marca=0&buscar=0">Celulares</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=3&marca=0">Audio</a>
+                        <a class="nav-link" href="Art.aspx?id=3&marca=0&buscar=0">Audio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=5&marca=0">Video</a>
+                        <a class="nav-link" href="Art.aspx?id=5&marca=0&buscar=0">Video</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=6&marca=0">Cámaras</a>
+                        <a class="nav-link" href="Art.aspx?id=6&marca=0&buscar=0">Cámaras</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=2&marca=0">Televisores</a>
+                        <a class="nav-link" href="Art.aspx?id=2&marca=0&buscar=0">Televisores</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Art.aspx?id=7&marca=0">Videojuegos</a>
+                        <a class="nav-link" href="Art.aspx?id=7&marca=0&buscar=0">Videojuegos</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" action="Art.aspx?id=0&marca=0&">

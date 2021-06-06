@@ -25,13 +25,15 @@ namespace Carrito_compras
             {
                 id = int.Parse(Request.QueryString["id"]);
                 marca = int.Parse(Request.QueryString["marca"]);
+
                 buscar = int.Parse(Request.QueryString["buscar"]);
                 listaBuscar = (List<Articulo>)Session["Buscar"];
+
             }
             catch (Exception ex)
             {
 
-                Response.Redirect("Default.aspx");
+                Response.Redirect("Error.aspx");
             }
         }
 
