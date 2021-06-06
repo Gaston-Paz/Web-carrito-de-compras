@@ -13,6 +13,7 @@ namespace Carrito_compras
         
         public List<ItemCarrito> items;
         ItemCarrito iten;
+        public decimal total;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,18 +39,34 @@ namespace Carrito_compras
                     }
                     else
                     {
+                        if (Request.QueryString["a"] == "r")
+                        {
+                            ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                            iten.Cantidad = elim.Cantidad - 1;
+                            iten.ItemArt = elim.ItemArt;
+                            iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+                            items.Remove(elim);
+                            items.Add(iten);
+                        }
+                        else { 
+
                         ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
                         iten.Cantidad = elim.Cantidad + 1;
                         iten.ItemArt = elim.ItemArt;
                         iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
                         items.Remove(elim);
                         items.Add(iten);
+                        }
                     }
 
-
-                  
                     
+
+
                 }
+
+                
+
+
 
                 if (Request.QueryString["a"] == "d")
                 {
@@ -66,6 +83,11 @@ namespace Carrito_compras
             }
 
             Session.Add("items", items);
+
+            foreach (ItemCarrito item in items)
+            {
+                total += item.Subtotal;
+            }
 
             
         }

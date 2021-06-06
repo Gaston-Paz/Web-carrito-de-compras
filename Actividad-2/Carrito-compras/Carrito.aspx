@@ -26,11 +26,16 @@
                             <th scope="row"><%#Eval("ItemArt.Codigo")%></th>
                             <td><%#Eval("ItemArt.Nombre")%></td>
                             <td>
+                                
+
                                 <%#Eval("Cantidad") %>
+                                <a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=a" class="btn btn-success btn-sm">+</a>
+                                <a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=r" class="btn btn-warning btn-sm">-</a>
                             </td>
                             <td>$<%#Eval("ItemArt.Precio")%></td>
                             <td>
                                 $<%#Eval("Subtotal") %>
+                                
                             </td>
                            <td><a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=d" class="btn btn-danger">Eliminar</a>
                             </td>
@@ -39,6 +44,15 @@
                 </asp:Repeater>
                         
            </tbody>
+
+          <tfoot>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>$<%= total %></th>
+              <th>Total</th>
+          </tfoot>
         </table>
 
         
@@ -47,7 +61,6 @@
 
     <div class="container d-flex justify-content-center">
 
-        <%--<a href="Carrito.aspx" class="btn btn-primary btn-lg mb-5" id="btnFinalizara">Finalizar compra</a>--%>
         <button type="button" class="btn btn-primary btn-lg mb-5" data-toggle="modal" data-target="#exampleModal">
             Finalizar Compra</button>
     </div>
