@@ -23,27 +23,21 @@
                 <asp:Repeater runat="server" ID="repetidor" >
                     <ItemTemplate>
                         <tr>
-                            <th scope="row"><%#Eval("Codigo")%></th>
-                            <td><%#Eval("Nombre")%></td>
+                            <th scope="row"><%#Eval("ItemArt.Codigo")%></th>
+                            <td><%#Eval("ItemArt.Nombre")%></td>
                             <td>
-                                <asp:DropDownList ID="DropDownListCantidad" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownListCantidad_SelectedIndexChanged" CommandArgument='<%#Eval("Id")%>'>
-                                    <asp:ListItem Selected="True" Value="1">1</asp:ListItem>
-                                    <asp:ListItem Value="2">2</asp:ListItem>
-                                    <asp:ListItem Value="3">3</asp:ListItem>
-                                    <asp:ListItem Value="4">4</asp:ListItem>
-                                    <asp:ListItem Value="5">5</asp:ListItem>
-                                </asp:DropDownList>
+                                <%#Eval("Cantidad") %>
                             </td>
-                            <td>$<%#Eval("Precio")%></td>
+                            <td>$<%#Eval("ItemArt.Precio")%></td>
                             <td>
-                                <asp:Label ID="LabelSubtotal" runat="server" Text="Label"></asp:Label>Otto
+                                $<%#Eval("Subtotal") %>
                             </td>
-                           <td><a href="Carrito.aspx?id=<%#Eval("Id")%>&a=d" class="btn btn-danger">Eliminar</a>
+                           <td><a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=d" class="btn btn-danger">Eliminar</a>
                             </td>
                        </tr>
                     </ItemTemplate>
                 </asp:Repeater>
-        
+                        
            </tbody>
         </table>
 

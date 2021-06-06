@@ -55,7 +55,7 @@
                     <h5 class="card-title"><%  = iten.Nombre  %> </h5>
                     <h6 class="card-title">$<% = iten.Precio %></h6>
                     <a href="ArtDetalle.aspx?codigo=<%=iten.Codigo%>" class="btn btn-primary align-content-center">Detalle</a>
-                    <a href="Carrito.aspx?id=<%=iten.Id %>" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="Carrito.aspx?id=<%=iten.Id%>&cant=1" class="btn btn-primary align-content-center"><i class="fas fa-shopping-cart"></i></a>
                 </div>
             </div>
             <% }

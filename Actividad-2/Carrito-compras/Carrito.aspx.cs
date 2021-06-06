@@ -10,50 +10,67 @@ namespace Carrito_compras
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        public List<Articulo> listaCarrito;
         
+        public List<ItemCarrito> items;
+        ItemCarrito iten;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            listaCarrito = (List<Articulo>)Session["listaCarrito"];
-            if (listaCarrito == null)
-                   listaCarrito = new List<Articulo>();
-                
+            
+
+            items = (List<ItemCarrito>)Session["items"];
+            if (items == null)
+                items = new List<ItemCarrito>();
+
+            iten = new ItemCarrito();
 
             if (!IsPostBack)
             {
                 if (Request.QueryString["Id"] != null)
                 {
-                    if (listaCarrito.Find(x => x.Id.ToString() == Request.QueryString["Id"]) == null)
+                    if(items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]) == null)
                     {
                         List<Articulo> listaActual = (List<Articulo>)Session["Articulos"];
-                        listaCarrito.Add(listaActual.Find(x => x.Id.ToString() == Request.QueryString["Id"]));
-
+                        iten.ItemArt = listaActual.Find(x => x.Id.ToString() == Request.QueryString["Id"]);
+                        iten.Cantidad = 1;
+                        iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+                        items.Add(iten);
                     }
+                    else
+                    {
+                        ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                        iten.Cantidad = elim.Cantidad + 1;
+                        iten.ItemArt = elim.ItemArt;
+                        iten.Subtotal = iten.Cantidad * iten.ItemArt.Precio;
+                        items.Remove(elim);
+                        items.Add(iten);
+                    }
+
+
+                  
                     
                 }
 
-                if(Request.QueryString["a"] == "d")
+                if (Request.QueryString["a"] == "d")
                 {
-                    Articulo elim = listaCarrito.Find(x => x.Id.ToString() == Request.QueryString["Id"]);
-                    listaCarrito.Remove(elim);
-                    Session.Add("listaCarrito", listaCarrito);
+                    ItemCarrito elim = items.Find(x => x.ItemArt.Id.ToString() == Request.QueryString["Id"]);
+                    items.Remove(elim);
+                    Session.Add("items", items);
                 }
 
 
-                repetidor.DataSource = listaCarrito;
+                repetidor.DataSource = items;
                 repetidor.DataBind();
+
+                
             }
 
-            Session.Add("listaCarrito", listaCarrito);
+            Session.Add("items", items);
+
+            
         }
 
-        protected void DropDownListCantidad_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            float subtotal;
-            var argument = ((DropDownList)sender);
-            Label = (int.Parse(((DropDownList)sender).Text) * int.Parse(argument.Text)).ToString();
-        }
+        
 
     }
 }

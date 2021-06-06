@@ -10,6 +10,6 @@ namespace Dominio
     {
         public int Cantidad { get; set; }
         public Articulo ItemArt  { get; set; }
-        public double Subtotal { get; set; }
+        public decimal Subtotal { get; set; }
     }
 }
