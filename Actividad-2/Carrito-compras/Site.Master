@@ -88,7 +88,7 @@
                 </form>
             </div>
                 <div class="btn btn-light">
-                    <a href="Carrito.aspx"><i class="fas fa-shopping-cart"></i><span class="badge badge-light ml-1"><%=Session["CantidadCarrito"]%></span></a>
+                    <a href="Carrito.aspx"><i class="fas fa-shopping-cart"></i><span class="badge badge-dark ml-1"><%=Session["CantidadCarrito"]%></span></a>
                 </div>
            </div>
         </nav>

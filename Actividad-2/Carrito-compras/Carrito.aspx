@@ -26,8 +26,6 @@
                             <th scope="row"><%#Eval("ItemArt.Codigo")%></th>
                             <td><%#Eval("ItemArt.Nombre")%></td>
                             <td>
-                                
-
                                 <%#Eval("Cantidad") %>
                                 <a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=a" class="btn btn-success btn-sm">+</a>
                                 <a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=r" class="btn btn-warning btn-sm">-</a>
@@ -37,7 +35,7 @@
                                 $<%#Eval("Subtotal") %>
                                 
                             </td>
-                           <td><a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=d" class="btn btn-danger">Eliminar</a>
+                           <td><a href="Carrito.aspx?id=<%#Eval("ItemArt.Id")%>&a=d" class="btn btn-danger btn-sm">Eliminar</a>
                             </td>
                        </tr>
                     </ItemTemplate>
@@ -61,7 +59,7 @@
 
     <div class="container d-flex justify-content-center">
 
-        <a href="Default.aspx" class="btn btn-primary btn-lg mb-5 mr-2">
+        <a href="Default.aspx" class="btn btn-secondary btn-lg mb-5 mr-2">
             Seguir Comprando</a>
 
         <button type="button" class="btn btn-primary btn-lg mb-5 ml-2" data-toggle="modal" data-target="#exampleModal">

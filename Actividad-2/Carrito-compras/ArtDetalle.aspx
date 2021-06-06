@@ -6,10 +6,10 @@
 
     <%foreach (Dominio.Articulo iten in (List<Dominio.Articulo>)Session["Articulos"])
         {
-            if (string.Compare(iten.Codigo, codigo)==0)
+            if (string.Compare(iten.Codigo, codigo) == 0)
             {
                 cat = iten.TipoCategoria.Id;
-                %>
+    %>
     <div class="row mt-5 align-items-center">
         <div class="col-md-6">
             <div class="row justify-content-center">
@@ -28,8 +28,8 @@
             <a href="Carrito.aspx?id=<%=iten.Id %>" class="btn btn-primary btn-lg mt-4">Agregar</a>
         </div>
     </div>
-         <% }
-       } %>
+    <% }
+        } %>
     <!--Otras sugerencias-->
     <div class="barra-espacio"></div>
     <div class="row py-2">
@@ -43,22 +43,19 @@
                     if (suge.TipoCategoria.Id == cat && cont < 5)
                     {
                         cont++;
-                        %>
-
-                <div class="card shadow">
-                    <img
-                        class="card-img-top"
-                        src="<%=suge.UrlImagen%>"
-                        alt="Card image cap" />
-                    <div class="card-body">
-                        <h4 class="card-title h5"><%=suge.Nombre%></h4>
-                        <p class="card-text">$<%=suge.Precio%></p>
-                    </div>
+            %>
+            <a href="ArtDetalle.aspx?codigo=<%=suge.Codigo%>" class="card shadow">
+                <img
+                    class="card-img-top"
+                    src="<%=suge.UrlImagen%>"
+                    alt="Card image cap" />
+                <div class="card-body">
+                    <h4 class="card-title h5"><%=suge.Nombre%></h4>
+                    <p class="card-text">$<%=suge.Precio%></p>
                 </div>
-
-           <% }
-        } %>
-           
+            </a>
+            <% }
+                } %>
         </div>
     </div>
 
