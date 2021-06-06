@@ -12,12 +12,23 @@ namespace Carrito_compras
     public partial class Art : System.Web.UI.Page
     {
         public List<Articulo> listado;
+        public List<Marca> lista;
+        public int id;
+        public int marca;
+        public List<Articulo> listaCarrito;
+        public int buscar;
+        public List<Articulo> listaBuscar;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio neg = new ArticuloNegocio();
             try
             {
-                listado = neg.listar();
+                id = int.Parse(Request.QueryString["id"]);
+                marca = int.Parse(Request.QueryString["marca"]);
+
+                buscar = int.Parse(Request.QueryString["buscar"]);
+                listaBuscar = (List<Articulo>)Session["Buscar"];
+
             }
             catch (Exception ex)
             {
@@ -25,6 +36,8 @@ namespace Carrito_compras
                 Response.Redirect("Error.aspx");
             }
         }
+
+     
     }
 }
 

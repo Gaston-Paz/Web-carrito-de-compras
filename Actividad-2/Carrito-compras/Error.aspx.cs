@@ -11,7 +11,15 @@ namespace Carrito_compras
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
 
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }
