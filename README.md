@@ -18,7 +18,7 @@ Se creo utilizando HTML, CSS, JS, C#, ASP.Net en Visual Studio Community.
 
 Este proyecto fue creado por [Gaston Paz](https://github.com/Gaston-Paz) [Maximiliano Miranda](https://github.com/Maxi-rpc) el cual se utilizo Visual Studio Community y como repositorio GitHub para tener control del versionado.
 
-# Video {demostración}(https://youtu.be/xW7tz4VYOh8)
+# Video [demostración](https://youtu.be/xW7tz4VYOh8)
 
 # Imágenes
 
