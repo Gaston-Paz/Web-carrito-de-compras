@@ -48,8 +48,12 @@ namespace Carrito_compras
             Session.Add("listaCarrito", listaCarrito);
         }
 
+        protected void DropDownListCantidad_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            float subtotal;
+            var argument = ((DropDownList)sender);
+            Label = (int.Parse(((DropDownList)sender).Text) * int.Parse(argument.Text)).ToString();
+        }
 
-
-       
     }
 }
